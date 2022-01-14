@@ -8,7 +8,8 @@ new Vue({
             "./img/roma.jpg",
             "./img/vienna.jpg"
         ],
-        currentIndex: 0
+        currentIndex: 0,
+        imageShow: false
     },
      methods: {
         next: function () {
@@ -22,6 +23,13 @@ new Vue({
             if(this.currentIndex < 0) {
                 this.currentIndex = this.cityImage.length - 1
             }
+        },
+
+        // per ogni elemento presente in cityImage,
+        // se click in dot1 visualizza ciyImage[0]
+
+        dot1: function () {
+            
         }
 
     }
