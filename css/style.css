@@ -44,8 +44,16 @@
     height: 100%;
     object-fit: cover;
 }
+.box-image .content-point {
+    position: absolute;
+    bottom: 0;
+    left: 330px;
+}
 
 .box-image .point {
-
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(128, 128, 128, 0.6);
 }
 
