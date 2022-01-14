@@ -1,0 +1,51 @@
+.container {
+    margin-top: 100px;
+    height: 500px;
+    width: 800px;
+}
+
+.container .box-image {
+    border: 1px solid black;
+    height: 500px;
+    position: relative;
+}
+
+.box-image .prev-button {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    background-color: rgba(128, 128, 128, 0.6);
+    color: white;
+    border-radius: 50%;
+}
+
+.box-image .next-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    background-color: rgba(128, 128, 128, 0.6);
+    color: white;
+    border-radius: 50%;
+}
+
+.box-image i.fas {
+    line-height: 50px;
+    padding-left: 10px;
+}
+
+.box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-image .point {
+
+}
+
