@@ -24,13 +24,7 @@ new Vue({
                 this.currentIndex = this.cityImage.length - 1
             }
         },
-
-        // per ogni elemento presente in cityImage,
-        // se click in dot1 visualizza ciyImage[0]
-
-        dot1: function () {
-            
-        }
+       
 
     }
 })
