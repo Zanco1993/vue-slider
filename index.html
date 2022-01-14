@@ -16,19 +16,25 @@
 </head>
 <body>
 
+<div id="app">
+
+
     <div class="container">
         <h1 class="text-center">Città Europee</h1>
         <div class="box-image">
 
-            <div class="prev-button">
+            <!-- questa parte deve essere dinamica con vue.js -->
+
+            <div @click="prev" class="prev-button">
                 <i class="fas fa-arrow-left"></i>
             </div>
 
-            <div class="next-button">
+            <div @click="next" class="next-button">
                 <i class="fas fa-arrow-right"></i>
             </div>
 
-            <img src="./img/roma.jpg" alt="">
+            <img :src="{{cityImage[currentIndex]}}" alt="">
+            
 
             <div class="content-point">
                 <div class="point"></div>
@@ -45,6 +51,8 @@
         
 
     </div>
+
+</div>
     
     
 
