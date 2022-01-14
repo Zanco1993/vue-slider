@@ -8,21 +8,25 @@ new Vue({
             "./img/roma.jpg",
             "./img/vienna.jpg"
         ],
-        currentIndex: 0,
-
-        methods: {
-            next: function () {
-                this.currentIndex++;
-            },
-            prev: function() {
-                this.currentIndex--;
+        currentIndex: 0
+    },
+     methods: {
+        next: function () {
+            this.currentIndex++;
+            if(this.currentIndex >= this.cityImage.length) {
+                this.currentIndex = 0;
             }
-
+        },
+        prev: function () {
+            this.currentIndex--;
+            if(this.currentIndex < 0) {
+                this.currentIndex = this.cityImage.length - 1
+            }
         }
+
     }
-    
-        
 })
+
 
 
 // aggiungere un array di immagini
