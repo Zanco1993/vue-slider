@@ -46,29 +46,27 @@
     height: 100%;
     object-fit: cover;
 }
-.box-image .content-point {
-    position: absolute;
-    bottom: 0;
-    left: 330px;
-}
 
 .box-image .row {
     justify-content: center;
 }
 .box-image .position-dot {
     position: absolute;
-    left: 340px;
-    bottom: 0;
+    left: 45%;
+    bottom: 10px;
 }
 
 .box-image .point{
-    width: 15px;
-    height: 15px;
-    background-color: rgb(255, 96, 96);
+    width: 20px;
+    height: 20px;
     border: 1px solid black;
+    border-radius: 50%;
 }
 
 .box-image .position-dot .active-color {
     background-color: white;
+}
+.box-image .position-dot .disable-color {
+    background-color: grey;
 }
 

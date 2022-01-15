@@ -25,13 +25,17 @@ new Vue({
             }
         },
         autoplay: function () {
-            this.timer = setInterval(() => {
-                this.next()
+            let time = this;
+            this.timer = setInterval(function() {
+                time.next();
             }, 2000);
-        }
-    }
-})
-
+        },
+    },
+    // aggiungiamo la funzione mounted 
+        mounted: function() {
+            this.autoplay();
+    },
+});
 
 
 // aggiungere un array di immagini
