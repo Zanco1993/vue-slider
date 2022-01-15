@@ -9,6 +9,7 @@ new Vue({
             "./img/vienna.jpg"
         ],
         currentIndex: 0,
+        timer: 0,
     },
      methods: {
         next: function () {
@@ -23,6 +24,11 @@ new Vue({
                 this.currentIndex = this.cityImage.length - 1
             }
         },
+        autoplay: function () {
+            this.timer = setInterval(() => {
+                this.next()
+            }, 2000);
+        }
     }
 })
 
