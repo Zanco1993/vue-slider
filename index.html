@@ -39,8 +39,8 @@
 
                 <img :src="cityImage[currentIndex]" alt="">
 
-                <div v-for="city in cityImage">
-                    
+                <div class="row position-dot">
+                    <div v-for="(city, i) in cityImage" :class="['point', currentIndex === i ? 'active-color' : 'disable-color']">                    
                 </div>
 
 

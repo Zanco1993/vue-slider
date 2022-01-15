@@ -9,7 +9,6 @@ new Vue({
             "./img/vienna.jpg"
         ],
         currentIndex: 0,
-        imageShow: false
     },
      methods: {
         next: function () {
@@ -24,8 +23,6 @@ new Vue({
                 this.currentIndex = this.cityImage.length - 1
             }
         },
-       
-
     }
 })
 

@@ -10,11 +10,6 @@
     position: relative;
 }
 
-.box-image .row {
-    justify-content: center;
-    align-items: center;
-}
-
 .box-image .prev-button {
     position: absolute;
     left: 10px;
@@ -25,6 +20,7 @@
     background-color: rgba(128, 128, 128, 0.6);
     color: white;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .box-image .next-button {
@@ -37,6 +33,7 @@
     background-color: rgba(128, 128, 128, 0.6);
     color: white;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .box-image i.fas {
@@ -55,10 +52,23 @@
     left: 330px;
 }
 
-.box-image .point {
-    display: inline-block;
+.box-image .row {
+    justify-content: center;
+}
+.box-image .position-dot {
+    position: absolute;
+    left: 300px;
+    bottom: 0;
+}
+
+.box-image .point{
     width: 15px;
     height: 15px;
     background-color: rgb(255, 96, 96);
+    border: 1px solid black;
+}
+
+.box-image .position-dot .active-color {
+    background-color: white;
 }
 
