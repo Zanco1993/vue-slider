@@ -9,7 +9,6 @@ new Vue({
             "./img/vienna.jpg"
         ],
         currentIndex: 0,
-        timer: 0,
     },
      methods: {
         next: function () {
