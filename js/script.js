@@ -31,6 +31,7 @@ new Vue({
         start: false,
         overImage: false,
         counterColor: 0,
+        colorIsTrue: false
     },
      methods: {
         next: function () {
@@ -64,18 +65,30 @@ new Vue({
             
         // },
         // -------------------------------------------------------------
-        // seconda soluzione
+        // SECONDA SOLUZIONE
+        // 2 pulsanti che avviano o stoppano il metodo
+        // stopButton: function () {
+        //     this.counterColor++;
+        //     clearInterval(this.interval);
+        // },
+
+        // startButton: function () {
+        //     this.counterColor++
+        //     this.autoplay();
+        // },
+        // -------------------------------------------------------------
+
+        // TERZA SOLUZIONE
         // 2 pulsanti che avviano o stoppano il metodo
         stopButton: function () {
-            this.counterColor++;
+            this.colorIsTrue = !this.colorIsTrue;
             clearInterval(this.interval);
         },
 
         startButton: function () {
-            this.counterColor++
+            this.colorIsTrue = !this.colorIsTrue;
             this.autoplay();
         },
-        // -------------------------------------------------------------
 
         // prova con hover del mouse
 

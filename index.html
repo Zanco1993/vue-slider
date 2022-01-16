@@ -62,15 +62,16 @@
             l'autoplay
             -->
             <div class="buttons">
-                <!-- PRIMA PROVA
-                al click cambia colore ai pulsanti
-                    TRUE FALSE SEMBRA NON FUNZIONINO -->
                 <!-- <button @click="unmounted" :class="[counterStop === true ? 'red-button' : 'disable-color']">STOP</button>
                 <button @click="mounted" :class="[counterStart === true ? 'green-button' : 'disable-color']">AVVIO</button> -->
 
-                <!-- AGGIUNTE CLASSI DINAMICHE AL CLICK -->
-                <button @click="stopButton" :class="[counterColor % 2 === 0 ? 'red-button' : 'disable-color']">STOP</button>
-                <button @click="startButton" :class="[counterColor % 2 !== 0 ? 'green-button' : 'disable-color']">AVVIO</button>
+                <!-- AGGIUNTE CLASSI DINAMICHE AL CLICK CON CONTATORE -->
+                <!-- <button @click="stopButton" :class="[counterColor % 2 === 0 ? 'red-button' : 'disable-color']">STOP</button>
+                <button @click="startButton" :class="[counterColor % 2 !== 0 ? 'green-button' : 'disable-color']">AVVIO</button> -->
+
+                <!-- SOLUZIONE TRUE FALSE  -->
+                <button @click="stopButton" :class="[colorIsTrue === true ? 'red-button' : 'disable-color']">STOP</button>
+                <button @click="startButton" :class="[colorIsTrue === false ? 'green-button' : 'disable-color']">AVVIO</button>
 
             </div>
             
