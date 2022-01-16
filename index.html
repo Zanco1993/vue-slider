@@ -40,13 +40,27 @@
                 <div class="row position-dot">
                     <div v-for="(city, i) in cityImage" :class="['point', currentIndex === i ? 'active-color' : 'disable-color']">                    
                 </div>
-
-
             </div>
 
+            <!--
+            PRIMA SOLUZIONE
+            con lo stesso button, avvio o blocco ad ogni click
+            -->
+            <!-- <button @click="mounted">AVVIO</button> -->
 
 
+             <!-- SECONDA SOLUZIONE
+            Creiamo 2 button che permettano di avviare o stoppare
+            l'autoplay
+            -->
+
+            <button @click="unmounted">STOP</button>
+            <button @click="mounted">AVVIO</button>
+
+
+            
         </div> 
+
 
     </div>
 

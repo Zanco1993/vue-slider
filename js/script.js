@@ -1,3 +1,21 @@
+// Ragionamenti
+
+// aggiungere un array di immagini
+// avere un contatore currentIndex = 0
+// se clicco next-button, passa dall'immagine [0] all'immagine [1]
+// quindi il currentIndex si aggiorna e va a 1 e cosi via
+
+// se clicco prev-button, currentIndex--
+
+// se raggiungo l'ultimo elemento,(quindi .length) al click successivo
+// aggiorno il contatore a [0]
+
+// se sono al primo elemento [0], al successivo click imposta l'ultimo 
+// elemento, quindi contatore = .length
+
+// aggiungere 2 pulsanti che avviano o stoppano l'autoplay immagini
+
+
 new Vue({
     el: "#app",
     data: {
@@ -9,6 +27,7 @@ new Vue({
             "./img/vienna.jpg"
         ],
         currentIndex: 0,
+        start: false,
     },
      methods: {
         next: function () {
@@ -25,27 +44,38 @@ new Vue({
         },
         autoplay: function () {
             let time = this;
-            this.timer = setInterval(function() {
+            time.timer = setInterval(function() {
                 time.next();
             }, 2000);
         },
-    },
-    // aggiungiamo la funzione mounted 
-        mounted: function() {
+        // -------------------------------------------------------------
+        // prima soluzione con un solo button
+
+        // mounted: function() {
+        //     this.start = !this.start
+        //     if(this.start === true) {
+        //        this.autoplay();
+        //     } else {
+        //         clearInterval(this.timer)
+        //     }
+            
+        // },
+        // -------------------------------------------------------------
+        // seconda soluzione
+        // 2 pulsanti che avviano o stoppano il metodo
+        mounted: function () {
             this.autoplay();
+        },
+        unmounted: function () {
+            clearInterval(this.timer)
+        },
+
+        
+
     },
+
+        
 });
+            
 
 
-// aggiungere un array di immagini
-// avere un contatore currentIndex = 0
-// se clicco next-button, passa dall'immagine [0] all'immagine [1]
-// quindi il currentIndex si aggiorna e va a 1 e cosi via
-
-// se clicco prev-button, currentIndex--
-
-// se raggiungo l'ultimo elemento,(quindi .length) al click successivo
-// aggiorno il contatore a [0]
-
-// se sono al primo elemento [0], al successivo click imposta l'ultimo 
-// elemento, quindi contatore = .length
