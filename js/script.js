@@ -30,6 +30,8 @@ new Vue({
         interval: 0,
         start: false,
         overImage: false,
+        counterStop: false,
+        counterStart: false,
     },
      methods: {
         next: function () {
@@ -65,11 +67,15 @@ new Vue({
         // -------------------------------------------------------------
         // seconda soluzione
         // 2 pulsanti che avviano o stoppano il metodo
-        mounted: function () {
-            this.autoplay();
-        },
         unmounted: function () {
+            this.counterStop === true;
+            this.counterStart === false;
             clearInterval(this.interval)
+        },
+        mounted: function () {
+            this.counterStop === false;
+            this.counterStart === true;
+            this.autoplay();
         },
         // -------------------------------------------------------------
 
@@ -84,7 +90,7 @@ new Vue({
         //     this.overImage === false
         //     clearInterval(this.timer)
         // }
-        
+
     },
 
         

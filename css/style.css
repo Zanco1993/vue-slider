@@ -70,3 +70,20 @@
     background-color: grey;
 }
 
+.container .buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+.container .buttons button {
+    font-size: 24px;
+}
+.container .buttons .red-button{
+    background-color: red;
+}
+
+.container .buttons .green-button{
+    background-color: green;
+}
+
+
+
