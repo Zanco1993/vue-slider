@@ -66,12 +66,12 @@ new Vue({
         // -------------------------------------------------------------
         // seconda soluzione
         // 2 pulsanti che avviano o stoppano il metodo
-        unmounted: function () {
+        stopButton: function () {
             this.counterColor++;
             clearInterval(this.interval);
         },
 
-        mounted: function () {
+        startButton: function () {
             this.counterColor++
             this.autoplay();
         },
