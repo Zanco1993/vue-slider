@@ -23,9 +23,13 @@
 
     <div id="app">
 
-         <div class="container">
+        <div class="container">
             <h1 class="text-center">Città Europee</h1>
-            <div class="box-image">
+            <!-- HOVER
+                Se passo sopra al mouse al box-image, allora blocca 
+                lo scroll, altrimenti continua 
+                -->
+            <div class="box-image" @mouseover="stopscroll" @mouseleave="playscroll">
 
                 <div @click="prev" class="prev-button">
                     <i class="fas fa-arrow-left"></i>
@@ -40,14 +44,8 @@
                 <div class="row position-dot">
                     <div v-for="(city, i) in cityImage" :class="['point', currentIndex === i ? 'active-color' : 'disable-color']">                    
                 </div>
-                 <!-- HOVER
-                Se passo sopra al mouse al box-image, allora blocca 
-                lo scroll, altrimenti continua 
-                -->
-                <div v:if="overImage">
-                    
-                </div>
 
+                </div>
             </div>
 
             <!--

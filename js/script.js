@@ -31,7 +31,7 @@ new Vue({
         start: false,
         overImage: false,
         counterColor: 0,
-        colorIsTrue: false
+        colorIsTrue: false,
     },
      methods: {
         next: function () {
@@ -48,9 +48,15 @@ new Vue({
         },
         autoplay: function () {
             let time = this;
-            time.interval = setInterval(function() {
+            time.timer = setInterval(function() {
                 time.next();
             }, 2000);
+        },
+        playscroll: function() {
+            this.autoplay();
+        },
+        stopscroll: function(){
+            clearInterval(this.timer)
         },
         // -------------------------------------------------------------
         // prima soluzione con un solo button
@@ -82,7 +88,7 @@ new Vue({
         // 2 pulsanti che avviano o stoppano il metodo
         stopButton: function () {
             this.colorIsTrue = !this.colorIsTrue;
-            clearInterval(this.interval);
+            clearInterval(this.timer);
         },
 
         startButton: function () {
