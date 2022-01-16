@@ -48,7 +48,7 @@ new Vue({
         },
         // la funzione autoplay avrei potuto metterla fuori dai methods cosìche partisse 
         // subito alla ricarica della pagina
-        // In questo caso si avvia solo se premo il button avvio
+        // In questo caso si avvia solo se premo il button avvio o passo sopra con il mouse
         autoplay: function () {
             let time = this;
             time.timer = setInterval(function() {
