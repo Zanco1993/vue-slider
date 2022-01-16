@@ -30,8 +30,7 @@ new Vue({
         interval: 0,
         start: false,
         overImage: false,
-        counterStop: false,
-        counterStart: false,
+        counterColor: 0,
     },
      methods: {
         next: function () {
@@ -68,13 +67,12 @@ new Vue({
         // seconda soluzione
         // 2 pulsanti che avviano o stoppano il metodo
         unmounted: function () {
-            this.counterStop === true;
-            this.counterStart === false;
-            clearInterval(this.interval)
+            this.counterColor++;
+            clearInterval(this.interval);
         },
+
         mounted: function () {
-            this.counterStop === false;
-            this.counterStart === true;
+            this.counterColor++
             this.autoplay();
         },
         // -------------------------------------------------------------

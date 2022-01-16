@@ -63,11 +63,14 @@
             -->
             <div class="buttons">
                 <!-- PRIMA PROVA
-                al click cambia colore ai pulsanti -->
+                al click cambia colore ai pulsanti
+                    TRUE FALSE SEMBRA NON FUNZIONINO -->
                 <!-- <button @click="unmounted" :class="[counterStop === true ? 'red-button' : 'disable-color']">STOP</button>
                 <button @click="mounted" :class="[counterStart === true ? 'green-button' : 'disable-color']">AVVIO</button> -->
-                <button @click="unmounted" :class="[counterStop === true ? 'red-button' : 'disable-color']">STOP</button>
-                <button @click="mounted" :class="[counterStart === true ? 'green-button' : 'disable-color']">AVVIO</button>
+
+                <!-- AGGIUNTE CLASSI DINAMICHE AL CLICK -->
+                <button @click="unmounted" :class="[counterColor % 2 === 0 ? 'red-button' : 'disable-color']">STOP</button>
+                <button @click="mounted" :class="[counterColor % 2 !== 0 ? 'green-button' : 'disable-color']">AVVIO</button>
 
             </div>
             
