@@ -40,6 +40,14 @@
                 <div class="row position-dot">
                     <div v-for="(city, i) in cityImage" :class="['point', currentIndex === i ? 'active-color' : 'disable-color']">                    
                 </div>
+                 <!-- HOVER
+                Se passo sopra al mouse al box-image, allora blocca 
+                lo scroll, altrimenti continua 
+                -->
+                <div v:if="overImage">
+                    
+                </div>
+
             </div>
 
             <!--
@@ -56,8 +64,6 @@
 
             <button @click="unmounted">STOP</button>
             <button @click="mounted">AVVIO</button>
-
-
             
         </div> 
 

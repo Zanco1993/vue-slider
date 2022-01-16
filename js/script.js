@@ -27,7 +27,9 @@ new Vue({
             "./img/vienna.jpg"
         ],
         currentIndex: 0,
+        interval: 0,
         start: false,
+        overImage: false,
     },
      methods: {
         next: function () {
@@ -44,7 +46,7 @@ new Vue({
         },
         autoplay: function () {
             let time = this;
-            time.timer = setInterval(function() {
+            time.interval = setInterval(function() {
                 time.next();
             }, 2000);
         },
@@ -67,11 +69,22 @@ new Vue({
             this.autoplay();
         },
         unmounted: function () {
-            clearInterval(this.timer)
+            clearInterval(this.interval)
         },
+        // -------------------------------------------------------------
 
+        // prova con hover del mouse
+
+        // overImage: function() {
+        //     this.overImage === true;
+        //     this.autoplay();
+        // },
+
+        // leaveImage: function() {
+        //     this.overImage === false
+        //     clearInterval(this.timer)
+        // }
         
-
     },
 
         
