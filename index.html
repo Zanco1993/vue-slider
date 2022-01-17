@@ -42,9 +42,13 @@
                 <img :src="cityImage[currentIndex]" alt="">
 
                 <div class="row position-dot">
-                    <div v-for="(city, i) in cityImage" :class="['point', currentIndex === i ? 'active-color' : 'disable-color']">                    
+                    <div v-for="(city, i) in cityImage"
+                    :class="getDotClasses(i)"                  
+                    @click="thisImage(i)">
                 </div>
-
+                 <!-- altra scrittura -->
+                <!-- :class="['point', currentIndex === i ? 'active-color' : 'disable-color']"                   -->
+                
                 </div>
             </div>
 

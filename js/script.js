@@ -29,11 +29,25 @@ new Vue({
         currentIndex: 0,
         interval: 0,
         start: false,
+        timer: null,
         overImage: false,
         counterColor: 0,
         colorIsTrue: false,
     },
      methods: {
+
+        // to do
+        
+        getDotClasses: function(i) {
+            let classes = 'point';
+            if(this.currentIndex === i) {
+                classes += ' active-color';
+            }
+            return classes;
+        },
+        thisImage: function(i) {
+            this.currentIndex = i
+        },
         next: function () {
             this.currentIndex++;
             if(this.currentIndex >= this.cityImage.length) {
@@ -49,11 +63,21 @@ new Vue({
         // la funzione autoplay avrei potuto metterla fuori dai methods cosìche partisse 
         // subito alla ricarica della pagina
         // In questo caso si avvia solo se premo il button avvio o passo sopra con il mouse
+
+        // soluzione con time assegnato
+        // autoplay: function () {
+        //     let time = this;
+        //     time.timer = setInterval(function() {
+        //         time.next();
+        //     }, 2000);
+        // },
+
+        // SOLUZIONE CON ARROW FUNCTION
         autoplay: function () {
-            let time = this;
-            time.timer = setInterval(function() {
-                time.next();
+            this.timer = setInterval( () => {
+                this.next();
             }, 2000);
+
         },
         playscroll: function() {
             this.autoplay();
@@ -99,19 +123,19 @@ new Vue({
             this.autoplay();
         },
 
-        // prova con hover del mouse
+        // -------------------------------------------------------------
 
-        // overImage: function() {
-        //     this.overImage === true;
-        //     this.autoplay();
-        // },
-
-        // leaveImage: function() {
-        //     this.overImage === false
-        //     clearInterval(this.timer)
-        // }
 
     },
+
+    // soluzione mounted
+
+    // mounted: function () {
+    //     this.timer = setInterval( () => {
+    //         this.next();
+    //     }, 2000);
+
+    // },
 
         
 });
